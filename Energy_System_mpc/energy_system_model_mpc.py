@@ -109,7 +109,6 @@ class EnergyModel(EnergyBaseModel):
 
             model = self.create_model(current_data_named, self.SoC_start)
             self.solve_model(model)
-            self.update_signal(model,timestep, current_data_named)
-
+            self.update_signal(model, timestep, current_data_named)
 
         self.dif_fixer.create_and_save_output(self.output_name)
